@@ -11,7 +11,6 @@ public class Uzduotis {
 	private float maxBalai;
 	private String pabaigosData;
 	private Kursas kursas;
-	//private boolean galimaIkeltiDarbus;
 	private Set<AtliktasDarbas> atliktiDarbai;
 	
 	public Uzduotis() {

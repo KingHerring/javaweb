@@ -11,10 +11,7 @@ import org.hibernate.cfg.Configuration;
 
 public class AktyvumoBaluSistema {
 
-	SessionFactory sf = null;
-	//private ArrayList<Destytojas> destytojai = new ArrayList<>();
-	//private ArrayList<Grupe> grupes = new ArrayList<>();
-	
+	SessionFactory sf = null;	
 	
 	public AktyvumoBaluSistema(){
 		sf = new Configuration().configure().buildSessionFactory();
@@ -36,10 +33,6 @@ public class AktyvumoBaluSistema {
 		s.close();
 	}
 	
-	/*public void PridetiGrupe(String kodas) {
-		Grupe naujaGrupe = new Grupe(kodas);
-		grupes.add(naujaGrupe);
-	}*/
 	
 	public void AtnaujintiKursa(Kursas k) {
 		Session s = sf.openSession();
@@ -233,13 +226,6 @@ public class AktyvumoBaluSistema {
 		throw(ex);
 	}
 		
-	/*public void SalintiDestytoja(int kodas) {
-		try {
-			destytojai.remove(GautiDestytojaPagalID(kodas));
-		}catch(Exception ex){
-			System.out.println("Tokio destytojo nera");
-		}
-	}*/
 
 	public ArrayList<Destytojas> getDestytojai() {
 		Session s = sf.openSession();

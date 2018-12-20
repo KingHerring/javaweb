@@ -20,11 +20,6 @@ public class Kursas {
 		this.destytojas = destytojas;
 	}
 	
-	public void PridetiGrupe(Grupe grupe) {
-		grupes.add(grupe);
-		grupe.getKursai().add(this);
-	}
-
 	
 	public void setKodas(int kodas) {
 		this.kodas = kodas;

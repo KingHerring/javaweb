@@ -17,13 +17,7 @@ public class Studentas {
 		this.vardas = vardas;
 		this.pavarde = pavarde;
 	}
-	
-	
-	
-	public void PateiktiDarba(int kodas, Uzduotis uzduotis, String sprendimas) {
-		AtliktasDarbas darbas = new AtliktasDarbas(kodas, uzduotis, sprendimas, this);
-		uzduotis.getAtliktiDarbai().add(darbas);
-	}		
+		
 	
 	public String getVardas() {
 		return vardas;

@@ -18,24 +18,6 @@ public class Destytojas {
 		this.vardas = vardas;
 		this.pavarde = pavarde;
 	}
-	
-	public void PridetiKursa(String pavadinimas) {
-		Kursas naujasKursas = new Kursas(pavadinimas, this);
-		kursai.add(naujasKursas);
-	}
-	
-	public void PridetiUzduoti(String pavadinimas, String salyga, float maxBalai, String pabaigosData, Kursas kursas) {
-		Uzduotis uzduotis = new Uzduotis(pavadinimas, salyga, maxBalai, pabaigosData, kursas);
-		kursas.getUzduotys().add(uzduotis);
-	}
-	
-	public Kursas GautiKursaPagalID(int kodas) throws Exception{
-		for(Kursas k: kursai) {
-			if(k.getKodas()==kodas) return k;
-		}
-		Exception ex = new Exception();
-		throw(ex);
-	}
 		
 	
 	public int getKodas() {

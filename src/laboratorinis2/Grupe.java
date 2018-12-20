@@ -19,20 +19,6 @@ public class Grupe implements Comparable<Grupe>{
 	}
 	
 	
-	public void PridetiStudenta(Studentas s) {	
-		studentai.add(s);
-		s.setGrupe(this);
-	}
-	
-	
-	public void RodytiGrupesStudentus() {
-		System.out.println(kodas+":");
-		for(Studentas studentas: studentai) {
-			System.out.println(studentas);
-		}
-		
-	}
-	
 	public Kursas GautiKursaPagalID(int kodas) throws Exception{
 		for(Kursas k: kursai) {
 			if(k.getKodas()==kodas) return k;
@@ -75,24 +61,6 @@ public class Grupe implements Comparable<Grupe>{
 		return kodas;
 	}
 
-
-	public void SalintiStudenta(int kodas) {
-		try {
-			studentai.remove(GautiStudentaPagalID(kodas));	
-		}catch(Exception ex){
-			System.out.println("Tokio studento nera");
-		}
-	}
-
-
-	public Studentas GautiStudentaPagalID(int kodas){
-		for(Studentas studentas: studentai) {
-			if(studentas.getKodas() == kodas) {
-				return studentas;
-			}
-		}
-		return null;	
-	}
 
 
 	@Override

@@ -97,8 +97,6 @@ public class HelloController{
 			ObjectMapper mapper = new ObjectMapper();
 			jsonInString = mapper.writeValueAsString(uzduotis);
 			return jsonInString;
-			//ModelAndView m = new ModelAndView("hello");
-			//return m.addObject("msg",uzduotis.GautiAprasyma());
 		}catch(Exception ex) {
 			System.out.println(ex);
 		}
