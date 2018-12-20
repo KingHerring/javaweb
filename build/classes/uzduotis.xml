@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "laboratorinis2.Uzduotis" table = "uzduotys">
+      
+      <meta attribute = "class-description">
+         Užduočių duomenys 
+      </meta>
+     
+      <id name = "kodas" type = "int" column = "kodas">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "pavadinimas" column = "pavadinimas" type = "string"/>
+      <property name = "salyga" column = "salyga" type = "string"/>
+      <property name = "pabaigosData" column = "pabaigos_data" type = "string"/>
+      <property name = "maxBalai" column = "balai" type = "float"/>
+
+            <many-to-one name = "kursas" column = "kursas" 
+         class="laboratorinis2.Kursas" not-null="true" lazy ="false"/>
+         
+     <set name = "atliktiDarbai" table = "atlikti_darbai" fetch = "select"  lazy = "false" cascade="all">
+      	<key>
+      		<column name = "uzduotis" not-null = "true"></column>
+      	</key>
+      	<one-to-many class = "laboratorinis2.AtliktasDarbas"/>
+      </set> 
+         
+      
+   </class>
+</hibernate-mapping>
